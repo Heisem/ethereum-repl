@@ -1,5 +1,5 @@
 # web3-repl
-Web3 REPL for Ethereum
+web3 REPL for Ethereum
 
 ### Includes:
   - web3
