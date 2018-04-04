@@ -2,7 +2,7 @@ const { NODE_ENV } = process.env;
 
 module.exports = {
   local: {
-    url: 'http:localhost:7545',
+    url: 'http://127.0.0.1:22000',
   },
   mainnet: {
     url: '',

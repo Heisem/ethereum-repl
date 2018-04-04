@@ -5,3 +5,7 @@ web3 REPL for Ethereum
   - web3
   - ethereumjs-tx
   - ethereumjs-util
+
+### How to use:
+  - `npm install`
+  - `NODE_ENV=env npm start`

@@ -1,19 +1,29 @@
 const repl = require('repl');
-const web3 = require('web3');
 const ethUtil = require('ethjs-util');
 const ethereumTx = require('ethereumjs-tx');
 
-const config = require('./config');
-const web3Client = new web3();
-const { NODE_ENV } = process.env;
+const web3 = require('./web3Client');
+const contracts = require('./contracts');
+const TokenUtils = require('./tokenUtils');
+const tokenUtils = new TokenUtils(web3, contracts);
 
-if (typeof NODE_ENV !== 'undefined') {
-  const provider = new web3.providers.HttpProvider(NODE_ENV.url);
-  web3Client.setProvider(provider);
-}
+/*tokenUtils.transfer(
+  'privateKey',
+  'toAddress',
+  1
+).then(console.log);*/
 
-global.web3 = web3Client;
+/*tokenUtils.sendTransaction(
+  'erc20',
+  'privateKey',
+  'transfer',
+  'toAddress', // address
+  web3.utils.toWei(String(1), 'ether'), // amount
+).then(console.log);*/
+
+global.web3 = web3;
 global.ethUtil = ethUtil;
 global.ethereumTx = ethereumTx;
+global.tokenUtils = tokenUtils;
 
 repl.start({});
