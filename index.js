@@ -4,8 +4,11 @@ const ethereumTx = require('ethereumjs-tx');
 
 const { web3 } = require('./config');
 const contracts = require('./contracts');
-const ContractUtils = require('./ContractUtils');
+const ContractUtils = require('contract-utils');
 const contractUtils = new ContractUtils(web3, contracts);
+
+const test = require('contract-utils');
+console.log(test);
 
 /*contractUtils.transfer(
   'e6181caaffff94a09d7e332fc8da9884d99902c7874eb74354bdcadf411929f1',
