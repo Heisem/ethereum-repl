@@ -1,9 +1,9 @@
 const ethereumTx = require('ethereumjs-tx');
 
-// Token Utility Library
-class TokenUtils {
+// Contract Utility Library
+class ContractUtils {
   /**
-   * Create TokenUtils
+   * Create ContractUtils
    * @param {object} web3 web3 instance
    * @param {object} contracts example: { 'erc20': { address: '', abi: [] } }
    */
@@ -100,4 +100,4 @@ class TokenUtils {
   }
 }
 
-module.exports = TokenUtils;
+module.exports = ContractUtils;
